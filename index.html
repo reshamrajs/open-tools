@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Open Tools</title>
+  <meta name="description" content="Free, open-source tools for researchers and students: a no-fee journal finder, a lung CT dataset toolkit, and an operating-systems simulator.">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧰</text></svg>">
+  <style>
+    :root { --bg:#f6f7f9; --surface:#fff; --text:#1b1d21; --muted:#5c6370; --border:#dfe2e7; --accent:#2563eb; color-scheme: light; }
+    @media (prefers-color-scheme: dark) { :root { --bg:#101216; --surface:#191c21; --text:#e8eaed; --muted:#9aa0a9; --border:#2c3038; --accent:#6b9dff; color-scheme: dark; } }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.55 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif; }
+    .wrap { max-width: 1080px; margin: 0 auto; padding: 0 16px; }
+    header { padding: 56px 0 28px; }
+    h1 { margin: 0; font-size: 2.4rem; letter-spacing: -.02em; }
+    .lead { color: var(--muted); font-size: 1.1rem; max-width: 60ch; margin: 10px 0 0; }
+    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(290px, 1fr)); gap: 18px; padding-bottom: 40px; }
+    .tool { background: var(--surface); border: 1px solid var(--border); border-top: 5px solid var(--c); border-radius: 12px; padding: 22px; display: flex; flex-direction: column; gap: 10px; transition: transform .15s, box-shadow .15s; }
+    .tool:hover { transform: translateY(-3px); box-shadow: 0 10px 28px rgb(0 0 0 / .08); }
+    @media (prefers-reduced-motion: reduce) { .tool, .tool:hover { transition: none; transform: none; } }
+    .icon { font-size: 2rem; line-height: 1; }
+    .tool h2 { margin: 0; font-size: 1.3rem; }
+    .who { margin: 0; font-size: .85rem; font-weight: 600; color: var(--c); }
+    .tool p { margin: 0; color: var(--muted); }
+    .tool ul { margin: 0; padding-left: 18px; color: var(--muted); font-size: .93rem; }
+    .actions { margin-top: auto; padding-top: 10px; display: flex; flex-wrap: wrap; gap: 8px; }
+    .btn { display: inline-block; padding: 10px 16px; border-radius: 8px; font-weight: 700; text-decoration: none; background: var(--c); color: #fff; }
+    .btn.ghost { background: transparent; color: var(--text); border: 1px solid var(--border); font-weight: 600; }
+    .btn:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+    footer { color: var(--muted); font-size: .9rem; border-top: 1px solid var(--border); padding: 20px 0 40px; }
+    footer a { color: var(--accent); }
+  </style>
+</head>
+<body>
+  <header class="wrap">
+    <h1>Open Tools</h1>
+    <p class="lead">Free, open-source tools for researchers and students. No sign-up, no tracking. Click a tool to open it.</p>
+  </header>
+
+  <main class="wrap grid">
+    <article class="tool" style="--c:#17803d">
+      <div class="icon" aria-hidden="true">📖</div>
+      <h2>JournalFree</h2>
+      <p class="who">For researchers and PhD students</p>
+      <p>Find high-impact (Q1) journals you can publish in without paying an article processing charge.</p>
+      <ul>
+        <li>Search and filter by subject, publisher, speed</li>
+        <li>Compare journals side by side</li>
+        <li>Unverified impact factors clearly flagged</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://reshamrajs.github.io/journalfree/">▶ Open JournalFree</a>
+        <a class="btn ghost" href="https://github.com/reshamrajs/journalfree">Source</a>
+      </div>
+    </article>
+
+    <article class="tool" style="--c:#2563eb">
+      <div class="icon" aria-hidden="true">⚙️</div>
+      <h2>OS-Sim Lab</h2>
+      <p class="who">For CS students and teachers</p>
+      <p>Watch operating-system algorithms run step by step, then practise and get your answers marked.</p>
+      <ul>
+        <li>CPU scheduling with Gantt charts</li>
+        <li>Page replacement and Belady's anomaly</li>
+        <li>Banker's algorithm and resource requests</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://reshamrajs.github.io/os-sim-lab/">▶ Open the simulator</a>
+        <a class="btn ghost" href="https://github.com/reshamrajs/os-sim-lab">Source</a>
+      </div>
+    </article>
+
+    <article class="tool" style="--c:#c2255c">
+      <div class="icon" aria-hidden="true">🫁</div>
+      <h2>lungct-kit</h2>
+      <p class="who">For medical-imaging AI researchers</p>
+      <p>A Python library that loads LUNA16 and LUNA25 lung CT data in one line, with leakage-safe patient splits.</p>
+      <ul>
+        <li>Correct world-to-voxel coordinates</li>
+        <li>Resampling, lung window, nodule patches</li>
+        <li>Plugs straight into PyTorch</li>
+      </ul>
+      <div class="actions">
+        <a class="btn" href="https://reshamrajs.github.io/lungct-kit/">📖 Open the docs</a>
+        <a class="btn ghost" href="https://github.com/reshamrajs/lungct-kit">Source</a>
+      </div>
+    </article>
+  </main>
+
+  <footer class="wrap">
+    Built by <a href="https://github.com/reshamrajs">Resham Raj Shivwanshi</a>. All tools are MIT licensed. Ideas and contributions welcome on GitHub.
+  </footer>
+</body>
+</html>
